@@ -1,3 +1,24 @@
+class Invoice {
+    client: string;
+    details: string;
+    amount: number;
+
+    constructor(c: string, d: string, a: number) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+
+    format() {
+        return `${this.client} owes ${this.amount}BGN for ${this.details}`
+    }
+}
+
+const invOne = new Invoice('Mitko', 'Frontend development', 200);
+
+//let invoice: string[] = [];
+let invoice: Invoice[] = [];
+
 //if we are sure that the element exists we can place ! at the end so we can avoid ts error
 //const form = document.querySelector('.new-item-form')!;
 
